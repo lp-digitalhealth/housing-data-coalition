@@ -1,14 +1,14 @@
-@prefix : <urn:housing-payment-data-model> .
+@prefix : <urn:housing-payment-data-model#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix med-pay: <urn:leavitt-partners:medicaid-payment-model#> .
-@base <urn:housing-payment-data-model> .
+@prefix med-pay: <urn:housing-payment-data-model#> .
+@base <urn:housing-payment-data-model#> .
 
-<urn:absolute:housing-payment-data-model> rdf:type owl:Ontology ;
-                                           owl:versionIRI <urn:absolute:housing-payment-data-model> .
+<urn:housing-payment-data-model#> rdf:type owl:Ontology ;
+                                   owl:versionIRI med-pay:v0.0.1 .
 
 #################################################################
 #    Annotation properties
@@ -31,643 +31,643 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  urn:leavitt-partners:medicaid-payment-model#hasAuthorization
-med-pay:hasAuthorization rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf owl:topObjectProperty ;
-                         rdfs:domain med-pay:Person ;
-                         rdfs:range med-pay:Authorization ;
-                         rdfs:label "hasAuthorization" .
+###  urn:housing-payment-data-model#hasAuthorization
+<urn:housing-payment-data-model#hasAuthorization> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf owl:topObjectProperty ;
+                                                               rdfs:domain <urn:housing-payment-data-model#Person> ;
+                                                               rdfs:range <urn:housing-payment-data-model#Authorization> ;
+                                                               rdfs:label "hasAuthorization" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#hasAuthorizedService
-med-pay:hasAuthorizedService rdf:type owl:ObjectProperty ;
-                             rdfs:subPropertyOf owl:topObjectProperty ;
-                             rdfs:domain med-pay:Person ;
-                             rdfs:range med-pay:Authorized_Service ;
-                             rdfs:label "hasAuthorizedService" .
+###  urn:housing-payment-data-model#hasAuthorizedService
+<urn:housing-payment-data-model#hasAuthorizedService> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                   rdfs:domain <urn:housing-payment-data-model#Person> ;
+                                                                   rdfs:range <urn:housing-payment-data-model#Authorized_Service> ;
+                                                                   rdfs:label "hasAuthorizedService" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#hasCarePlan
-med-pay:hasCarePlan rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf owl:topObjectProperty ;
-                    rdfs:domain med-pay:Person ;
-                    rdfs:range med-pay:Care_Plan ;
-                    rdfs:label "hasCarePlan" .
+###  urn:housing-payment-data-model#hasCarePlan
+<urn:housing-payment-data-model#hasCarePlan> rdf:type owl:ObjectProperty ;
+                                                          rdfs:subPropertyOf owl:topObjectProperty ;
+                                                          rdfs:domain <urn:housing-payment-data-model#Person> ;
+                                                          rdfs:range <urn:housing-payment-data-model#Care_Plan> ;
+                                                          rdfs:label "hasCarePlan" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#hasGoalStatus
-med-pay:hasGoalStatus rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf owl:topObjectProperty ;
-                      rdfs:domain med-pay:Goals ;
-                      rdfs:range med-pay:Goal_Status ;
-                      rdfs:label "hasGoalStatus"@en .
+###  urn:housing-payment-data-model#hasGoalStatus
+<urn:housing-payment-data-model#hasGoalStatus> rdf:type owl:ObjectProperty ;
+                                                            rdfs:subPropertyOf owl:topObjectProperty ;
+                                                            rdfs:domain <urn:housing-payment-data-model#Goals> ;
+                                                            rdfs:range <urn:housing-payment-data-model#Goal_Status> ;
+                                                            rdfs:label "hasGoalStatus"@en .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#hasGoals
-med-pay:hasGoals rdf:type owl:ObjectProperty ;
-                 rdfs:domain med-pay:Care_Plan ;
-                 rdfs:range med-pay:Goals ;
-                 rdfs:label "hasGoals" .
+###  urn:housing-payment-data-model#hasGoals
+<urn:housing-payment-data-model#hasGoals> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain <urn:housing-payment-data-model#Care_Plan> ;
+                                                       rdfs:range <urn:housing-payment-data-model#Goals> ;
+                                                       rdfs:label "hasGoals" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#hasMedicaidInformation
-med-pay:hasMedicaidInformation rdf:type owl:ObjectProperty ;
-                               rdfs:subPropertyOf owl:topObjectProperty ;
-                               rdfs:domain med-pay:Person ;
-                               rdfs:range med-pay:MedicaidInformation ;
-                               rdfs:label "hasMedicaidInformation"@en .
+###  urn:housing-payment-data-model#hasMedicaidInformation
+<urn:housing-payment-data-model#hasMedicaidInformation> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                     rdfs:domain <urn:housing-payment-data-model#Person> ;
+                                                                     rdfs:range <urn:housing-payment-data-model#MedicaidInformation> ;
+                                                                     rdfs:label "hasMedicaidInformation"@en .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#hasModalityofService
-med-pay:hasModalityofService rdf:type owl:ObjectProperty ;
-                             rdfs:subPropertyOf owl:topObjectProperty ;
-                             rdfs:domain med-pay:Service_Encounters ;
-                             rdfs:range med-pay:Modality_of_Service ;
-                             rdfs:label "hasModalityofService"@en .
+###  urn:housing-payment-data-model#hasModalityofService
+<urn:housing-payment-data-model#hasModalityofService> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                   rdfs:domain <urn:housing-payment-data-model#Service_Encounters> ;
+                                                                   rdfs:range <urn:housing-payment-data-model#Modality_of_Service> ;
+                                                                   rdfs:label "hasModalityofService"@en .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#hasPlaceofService
-med-pay:hasPlaceofService rdf:type owl:ObjectProperty ;
-                          rdfs:subPropertyOf owl:topObjectProperty ;
-                          rdfs:domain med-pay:Service_Encounters ;
-                          rdfs:range med-pay:Place_of_Service ;
-                          rdfs:label "hasPlaceofService"@en .
+###  urn:housing-payment-data-model#hasPlaceofService
+<urn:housing-payment-data-model#hasPlaceofService> rdf:type owl:ObjectProperty ;
+                                                                rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                rdfs:domain <urn:housing-payment-data-model#Service_Encounters> ;
+                                                                rdfs:range <urn:housing-payment-data-model#Place_of_Service> ;
+                                                                rdfs:label "hasPlaceofService"@en .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#hasServiceEncounters
-med-pay:hasServiceEncounters rdf:type owl:ObjectProperty ;
-                             rdfs:subPropertyOf owl:topObjectProperty ;
-                             rdfs:domain med-pay:Authorized_Service ;
-                             rdfs:range med-pay:Service_Encounters ;
-                             rdfs:label "hasServiceEncounters" .
+###  urn:housing-payment-data-model#hasServiceEncounters
+<urn:housing-payment-data-model#hasServiceEncounters> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                   rdfs:domain <urn:housing-payment-data-model#Authorized_Service> ;
+                                                                   rdfs:range <urn:housing-payment-data-model#Service_Encounters> ;
+                                                                   rdfs:label "hasServiceEncounters" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#hasSex
-med-pay:hasSex rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf owl:topObjectProperty ;
-               rdfs:domain med-pay:Person ;
-               rdfs:range med-pay:Sex ;
-               rdfs:label "hasSex" .
+###  urn:housing-payment-data-model#hasSex
+<urn:housing-payment-data-model#hasSex> rdf:type owl:ObjectProperty ;
+                                                     rdfs:subPropertyOf owl:topObjectProperty ;
+                                                     rdfs:domain <urn:housing-payment-data-model#Person> ;
+                                                     rdfs:range <urn:housing-payment-data-model#Sex> ;
+                                                     rdfs:label "hasSex" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#hasStatus
-med-pay:hasStatus rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf owl:topObjectProperty ;
-                  rdfs:domain med-pay:Authorization ;
-                  rdfs:range med-pay:Status ;
-                  rdfs:label "hasStatus" .
+###  urn:housing-payment-data-model#hasStatus
+<urn:housing-payment-data-model#hasStatus> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:domain <urn:housing-payment-data-model#Authorization> ;
+                                                        rdfs:range <urn:housing-payment-data-model#Status> ;
+                                                        rdfs:label "hasStatus" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#hasTribalAffiliation
-med-pay:hasTribalAffiliation rdf:type owl:ObjectProperty ;
-                             rdfs:subPropertyOf owl:topObjectProperty ;
-                             rdfs:domain med-pay:Person ;
-                             rdfs:range med-pay:TribalAffiliation ;
-                             rdfs:label "hasTribalAffiliation" .
+###  urn:housing-payment-data-model#hasTribalAffiliation
+<urn:housing-payment-data-model#hasTribalAffiliation> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                   rdfs:domain <urn:housing-payment-data-model#Person> ;
+                                                                   rdfs:range <urn:housing-payment-data-model#TribalAffiliation> ;
+                                                                   rdfs:label "hasTribalAffiliation" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#hasTypeofGoal
-med-pay:hasTypeofGoal rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf owl:topObjectProperty ;
-                      rdfs:domain med-pay:Goals ;
-                      rdfs:range med-pay:Type_of_Goal ;
-                      rdfs:label "hasTypeofGoal" .
+###  urn:housing-payment-data-model#hasTypeofGoal
+<urn:housing-payment-data-model#hasTypeofGoal> rdf:type owl:ObjectProperty ;
+                                                            rdfs:subPropertyOf owl:topObjectProperty ;
+                                                            rdfs:domain <urn:housing-payment-data-model#Goals> ;
+                                                            rdfs:range <urn:housing-payment-data-model#Type_of_Goal> ;
+                                                            rdfs:label "hasTypeofGoal" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#hasUnitType
-med-pay:hasUnitType rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf owl:topObjectProperty ;
-                    rdfs:label "hasUnitType" .
+###  urn:housing-payment-data-model#hasUnitType
+<urn:housing-payment-data-model#hasUnitType> rdf:type owl:ObjectProperty ;
+                                                          rdfs:subPropertyOf owl:topObjectProperty ;
+                                                          rdfs:label "hasUnitType" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#hasVeteranStatus
-med-pay:hasVeteranStatus rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf owl:topObjectProperty ;
-                         rdfs:domain med-pay:Person ;
-                         rdfs:range med-pay:VeteranStatus ;
-                         rdfs:label "hasVeteranStatus"@en .
+###  urn:housing-payment-data-model#hasVeteranStatus
+<urn:housing-payment-data-model#hasVeteranStatus> rdf:type owl:ObjectProperty ;
+                                                               rdfs:subPropertyOf owl:topObjectProperty ;
+                                                               rdfs:domain <urn:housing-payment-data-model#Person> ;
+                                                               rdfs:range <urn:housing-payment-data-model#VeteranStatus> ;
+                                                               rdfs:label "hasVeteranStatus"@en .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  urn:leavitt-partners:medicaid-payment-model#Begin_Date
-med-pay:Begin_Date rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf owl:topDataProperty ;
-                   rdf:type owl:FunctionalProperty ;
-                   rdfs:domain med-pay:Authorized_Service ;
-                   rdfs:range xsd:date ;
-                   rdfs:label "Begin Date" .
+###  urn:housing-payment-data-model#Begin_Date
+<urn:housing-payment-data-model#Begin_Date> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                                         rdf:type owl:FunctionalProperty ;
+                                                         rdfs:domain <urn:housing-payment-data-model#Authorized_Service> ;
+                                                         rdfs:range xsd:date ;
+                                                         rdfs:label "Begin Date" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#ConditionorDiagnosis
-med-pay:ConditionorDiagnosis rdf:type owl:DatatypeProperty ;
-                             rdfs:subPropertyOf owl:topDataProperty ;
-                             rdfs:domain med-pay:Authorization ;
-                             rdfs:range xsd:string ;
-                             rdfs:label "Condition or Diagnosis"@en .
+###  urn:housing-payment-data-model#ConditionorDiagnosis
+<urn:housing-payment-data-model#ConditionorDiagnosis> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                                                   rdfs:domain <urn:housing-payment-data-model#Authorization> ;
+                                                                   rdfs:range xsd:string ;
+                                                                   rdfs:label "Condition or Diagnosis"@en .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Date_Care_Plan_Established
-med-pay:Date_Care_Plan_Established rdf:type owl:DatatypeProperty ;
-                                   rdfs:subPropertyOf owl:topDataProperty ;
-                                   rdf:type owl:FunctionalProperty ;
-                                   rdfs:domain med-pay:Care_Plan ;
-                                   rdfs:range xsd:date ;
-                                   rdfs:label "Date Care Plan Established" .
+###  urn:housing-payment-data-model#Date_Care_Plan_Established
+<urn:housing-payment-data-model#Date_Care_Plan_Established> rdf:type owl:DatatypeProperty ;
+                                                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                                                         rdf:type owl:FunctionalProperty ;
+                                                                         rdfs:domain <urn:housing-payment-data-model#Care_Plan> ;
+                                                                         rdfs:range xsd:date ;
+                                                                         rdfs:label "Date Care Plan Established" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Date_of_Birth
-med-pay:Date_of_Birth rdf:type owl:DatatypeProperty ;
-                      rdfs:subPropertyOf owl:topDataProperty ;
-                      rdf:type owl:FunctionalProperty ;
-                      rdfs:domain med-pay:Person ;
-                      rdfs:range xsd:date ;
-                      rdfs:label "Date of Birth" .
+###  urn:housing-payment-data-model#Date_of_Birth
+<urn:housing-payment-data-model#Date_of_Birth> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                                            rdf:type owl:FunctionalProperty ;
+                                                            rdfs:domain <urn:housing-payment-data-model#Person> ;
+                                                            rdfs:range xsd:date ;
+                                                            rdfs:label "Date of Birth" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Date_of_Goal
-med-pay:Date_of_Goal rdf:type owl:DatatypeProperty ;
-                     rdfs:subPropertyOf owl:topDataProperty ;
-                     rdf:type owl:FunctionalProperty ;
-                     rdfs:domain med-pay:Goals ;
-                     rdfs:range xsd:date ;
-                     rdfs:label "Date of Goal" .
+###  urn:housing-payment-data-model#Date_of_Goal
+<urn:housing-payment-data-model#Date_of_Goal> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:subPropertyOf owl:topDataProperty ;
+                                                           rdf:type owl:FunctionalProperty ;
+                                                           rdfs:domain <urn:housing-payment-data-model#Goals> ;
+                                                           rdfs:range xsd:date ;
+                                                           rdfs:label "Date of Goal" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Date_of_Interaction
-med-pay:Date_of_Interaction rdf:type owl:DatatypeProperty ;
-                            rdfs:subPropertyOf owl:topDataProperty ;
-                            rdf:type owl:FunctionalProperty ;
-                            rdfs:domain med-pay:Service_Encounters ;
-                            rdfs:range xsd:date ;
-                            rdfs:label "Date of Interaction" .
+###  urn:housing-payment-data-model#Date_of_Interaction
+<urn:housing-payment-data-model#Date_of_Interaction> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:subPropertyOf owl:topDataProperty ;
+                                                                  rdf:type owl:FunctionalProperty ;
+                                                                  rdfs:domain <urn:housing-payment-data-model#Service_Encounters> ;
+                                                                  rdfs:range xsd:date ;
+                                                                  rdfs:label "Date of Interaction" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#End_Date
-med-pay:End_Date rdf:type owl:DatatypeProperty ;
-                 rdfs:subPropertyOf owl:topDataProperty ;
-                 rdf:type owl:FunctionalProperty ;
-                 rdfs:domain med-pay:Authorized_Service ;
-                 rdfs:range xsd:date ;
-                 rdfs:label "End Date" .
+###  urn:housing-payment-data-model#End_Date
+<urn:housing-payment-data-model#End_Date> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                                       rdf:type owl:FunctionalProperty ;
+                                                       rdfs:domain <urn:housing-payment-data-model#Authorized_Service> ;
+                                                       rdfs:range xsd:date ;
+                                                       rdfs:label "End Date" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#FirstName
-med-pay:FirstName rdf:type owl:DatatypeProperty ;
-                  rdfs:subPropertyOf owl:topDataProperty ;
-                  rdf:type owl:FunctionalProperty ;
-                  rdfs:domain med-pay:Person ;
-                  rdfs:range xsd:string ;
-                  rdfs:label "First Name"@en .
+###  urn:housing-payment-data-model#FirstName
+<urn:housing-payment-data-model#FirstName> rdf:type owl:DatatypeProperty ;
+                                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                                        rdf:type owl:FunctionalProperty ;
+                                                        rdfs:domain <urn:housing-payment-data-model#Person> ;
+                                                        rdfs:range xsd:string ;
+                                                        rdfs:label "First Name"@en .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Goal_Description
-med-pay:Goal_Description rdf:type owl:DatatypeProperty ;
-                         rdfs:subPropertyOf owl:topDataProperty ;
-                         rdf:type owl:FunctionalProperty ;
-                         rdfs:domain med-pay:Goals ;
-                         rdfs:range xsd:string ;
-                         rdfs:label "Goal Description" .
+###  urn:housing-payment-data-model#Goal_Description
+<urn:housing-payment-data-model#Goal_Description> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                                               rdf:type owl:FunctionalProperty ;
+                                                               rdfs:domain <urn:housing-payment-data-model#Goals> ;
+                                                               rdfs:range xsd:string ;
+                                                               rdfs:label "Goal Description" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Health_Plan_Name
-med-pay:Health_Plan_Name rdf:type owl:DatatypeProperty ;
-                         rdfs:subPropertyOf owl:topDataProperty ;
-                         rdf:type owl:FunctionalProperty ;
-                         rdfs:domain med-pay:MedicaidInformation ;
-                         rdfs:range xsd:string ;
-                         rdfs:label "Health Plan Name" .
+###  urn:housing-payment-data-model#Health_Plan_Name
+<urn:housing-payment-data-model#Health_Plan_Name> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                                               rdf:type owl:FunctionalProperty ;
+                                                               rdfs:domain <urn:housing-payment-data-model#MedicaidInformation> ;
+                                                               rdfs:range xsd:string ;
+                                                               rdfs:label "Health Plan Name" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#LastName
-med-pay:LastName rdf:type owl:DatatypeProperty ;
-                 rdfs:subPropertyOf owl:topDataProperty ;
-                 rdf:type owl:FunctionalProperty ;
-                 rdfs:domain med-pay:Person ;
-                 rdfs:range xsd:string ;
-                 rdfs:label "Last Name"@en .
+###  urn:housing-payment-data-model#LastName
+<urn:housing-payment-data-model#LastName> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                                       rdf:type owl:FunctionalProperty ;
+                                                       rdfs:domain <urn:housing-payment-data-model#Person> ;
+                                                       rdfs:range xsd:string ;
+                                                       rdfs:label "Last Name"@en .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Medicaid_ID
-med-pay:Medicaid_ID rdf:type owl:DatatypeProperty ;
-                    rdfs:subPropertyOf owl:topDataProperty ;
-                    rdf:type owl:FunctionalProperty ;
-                    rdfs:domain med-pay:MedicaidInformation ;
-                    rdfs:range xsd:string ;
-                    rdfs:label "Medicaid ID" .
+###  urn:housing-payment-data-model#Medicaid_ID
+<urn:housing-payment-data-model#Medicaid_ID> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:subPropertyOf owl:topDataProperty ;
+                                                          rdf:type owl:FunctionalProperty ;
+                                                          rdfs:domain <urn:housing-payment-data-model#MedicaidInformation> ;
+                                                          rdfs:range xsd:string ;
+                                                          rdfs:label "Medicaid ID" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Notes
-med-pay:Notes rdf:type owl:DatatypeProperty ;
-              rdfs:subPropertyOf owl:topDataProperty ;
-              rdf:type owl:FunctionalProperty ;
-              rdfs:domain med-pay:Service_Encounters ;
-              rdfs:range xsd:string ;
-              rdfs:label "Notes" .
+###  urn:housing-payment-data-model#Notes
+<urn:housing-payment-data-model#Notes> rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf owl:topDataProperty ;
+                                                    rdf:type owl:FunctionalProperty ;
+                                                    rdfs:domain <urn:housing-payment-data-model#Service_Encounters> ;
+                                                    rdfs:range xsd:string ;
+                                                    rdfs:label "Notes" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#SSN
-med-pay:SSN rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
-            rdf:type owl:FunctionalProperty ;
-            rdfs:domain med-pay:Person ;
-            rdfs:range xsd:string ;
-            rdfs:label "SSN"@en .
+###  urn:housing-payment-data-model#SSN
+<urn:housing-payment-data-model#SSN> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:subPropertyOf owl:topDataProperty ;
+                                                  rdf:type owl:FunctionalProperty ;
+                                                  rdfs:domain <urn:housing-payment-data-model#Person> ;
+                                                  rdfs:range xsd:string ;
+                                                  rdfs:label "SSN"@en .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Service_Type
-med-pay:Service_Type rdf:type owl:DatatypeProperty ;
-                     rdfs:subPropertyOf owl:topDataProperty ;
-                     rdfs:domain med-pay:Authorized_Service ;
-                     rdfs:range xsd:string ;
-                     rdfs:label "Service Type"@en .
+###  urn:housing-payment-data-model#Service_Type
+<urn:housing-payment-data-model#Service_Type> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:subPropertyOf owl:topDataProperty ;
+                                                           rdfs:domain <urn:housing-payment-data-model#Authorized_Service> ;
+                                                           rdfs:range xsd:string ;
+                                                           rdfs:label "Service Type"@en .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Service_Type_Authorized
-med-pay:Service_Type_Authorized rdf:type owl:DatatypeProperty ;
-                                rdfs:subPropertyOf owl:topDataProperty ;
-                                rdfs:domain med-pay:Service_Encounters ;
-                                rdfs:range xsd:string ;
-                                rdfs:label "Service Type Authorized"@en .
+###  urn:housing-payment-data-model#Service_Type_Authorized
+<urn:housing-payment-data-model#Service_Type_Authorized> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                                                      rdfs:domain <urn:housing-payment-data-model#Service_Encounters> ;
+                                                                      rdfs:range xsd:string ;
+                                                                      rdfs:label "Service Type Authorized"@en .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Unit_Value
-med-pay:Unit_Value rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf owl:topDataProperty ;
-                   rdf:type owl:FunctionalProperty ;
-                   rdfs:domain med-pay:Authorized_Service ;
-                   rdfs:range xsd:integer ;
-                   rdfs:label "Unit Value" .
+###  urn:housing-payment-data-model#Unit_Value
+<urn:housing-payment-data-model#Unit_Value> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                                         rdf:type owl:FunctionalProperty ;
+                                                         rdfs:domain <urn:housing-payment-data-model#Authorized_Service> ;
+                                                         rdfs:range xsd:integer ;
+                                                         rdfs:label "Unit Value" .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  urn:leavitt-partners:medicaid-payment-model#Authorization
-med-pay:Authorization rdf:type owl:Class ;
-                      rdfs:label "Authorization" .
+###  urn:housing-payment-data-model#Authorization
+<urn:housing-payment-data-model#Authorization> rdf:type owl:Class ;
+                                                            rdfs:label "Authorization" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Authorized_Service
-med-pay:Authorized_Service rdf:type owl:Class ;
-                           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                             owl:onProperty med-pay:hasUnitType ;
-                                             owl:someValuesFrom med-pay:Unit_Type
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty med-pay:Unit_Value ;
-                                             owl:allValuesFrom xsd:integer
-                                           ] ;
-                           rdfs:label "Authorized Service" .
+###  urn:housing-payment-data-model#Authorized_Service
+<urn:housing-payment-data-model#Authorized_Service> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <urn:housing-payment-data-model#hasUnitType> ;
+                                                                                   owl:someValuesFrom <urn:housing-payment-data-model#Unit_Type>
+                                                                                 ] ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <urn:housing-payment-data-model#Unit_Value> ;
+                                                                                   owl:allValuesFrom xsd:integer
+                                                                                 ] ;
+                                                                 rdfs:label "Authorized Service" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Care_Plan
-med-pay:Care_Plan rdf:type owl:Class ;
-                  rdfs:label "Care Plan" .
+###  urn:housing-payment-data-model#Care_Plan
+<urn:housing-payment-data-model#Care_Plan> rdf:type owl:Class ;
+                                                        rdfs:label "Care Plan" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Goal_Status
-med-pay:Goal_Status rdf:type owl:Class ;
-                    rdfs:label "Goal Status"@en .
+###  urn:housing-payment-data-model#Goal_Status
+<urn:housing-payment-data-model#Goal_Status> rdf:type owl:Class ;
+                                                          rdfs:label "Goal Status"@en .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Goals
-med-pay:Goals rdf:type owl:Class ;
-              rdfs:label "Goals" .
+###  urn:housing-payment-data-model#Goals
+<urn:housing-payment-data-model#Goals> rdf:type owl:Class ;
+                                                    rdfs:label "Goals" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#MedicaidInformation
-med-pay:MedicaidInformation rdf:type owl:Class ;
-                            rdfs:label "Medicaid Information"@en .
+###  urn:housing-payment-data-model#MedicaidInformation
+<urn:housing-payment-data-model#MedicaidInformation> rdf:type owl:Class ;
+                                                                  rdfs:label "Medicaid Information"@en .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Modality_of_Service
-med-pay:Modality_of_Service rdf:type owl:Class ;
-                            rdfs:label "Modality of Service"@en .
+###  urn:housing-payment-data-model#Modality_of_Service
+<urn:housing-payment-data-model#Modality_of_Service> rdf:type owl:Class ;
+                                                                  rdfs:label "Modality of Service"@en .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Person
-med-pay:Person rdf:type owl:Class ;
-               rdfs:label "Person"@en .
+###  urn:housing-payment-data-model#Person
+<urn:housing-payment-data-model#Person> rdf:type owl:Class ;
+                                                     rdfs:label "Person"@en .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Place_of_Service
-med-pay:Place_of_Service rdf:type owl:Class ;
-                         rdfs:label "Place of Service"@en .
+###  urn:housing-payment-data-model#Place_of_Service
+<urn:housing-payment-data-model#Place_of_Service> rdf:type owl:Class ;
+                                                               rdfs:label "Place of Service"@en .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Service_Encounters
-med-pay:Service_Encounters rdf:type owl:Class ;
-                           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                             owl:onProperty med-pay:hasUnitType ;
-                                             owl:someValuesFrom med-pay:Unit_Type
-                                           ] ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty med-pay:Unit_Value ;
-                                             owl:allValuesFrom xsd:integer
-                                           ] ;
-                           rdfs:label "Service Encounters" .
+###  urn:housing-payment-data-model#Service_Encounters
+<urn:housing-payment-data-model#Service_Encounters> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <urn:housing-payment-data-model#hasUnitType> ;
+                                                                                   owl:someValuesFrom <urn:housing-payment-data-model#Unit_Type>
+                                                                                 ] ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <urn:housing-payment-data-model#Unit_Value> ;
+                                                                                   owl:allValuesFrom xsd:integer
+                                                                                 ] ;
+                                                                 rdfs:label "Service Encounters" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Sex
-med-pay:Sex rdf:type owl:Class ;
-            rdfs:label "Sex"@en .
+###  urn:housing-payment-data-model#Sex
+<urn:housing-payment-data-model#Sex> rdf:type owl:Class ;
+                                                  rdfs:label "Sex"@en .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Status
-med-pay:Status rdf:type owl:Class ;
-               rdfs:label "Status"@en .
+###  urn:housing-payment-data-model#Status
+<urn:housing-payment-data-model#Status> rdf:type owl:Class ;
+                                                     rdfs:label "Status"@en .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#TribalAffiliation
-med-pay:TribalAffiliation rdf:type owl:Class ;
-                          rdfs:label "TribalAffiliation" .
+###  urn:housing-payment-data-model#TribalAffiliation
+<urn:housing-payment-data-model#TribalAffiliation> rdf:type owl:Class ;
+                                                                rdfs:label "TribalAffiliation" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Type_of_Goal
-med-pay:Type_of_Goal rdf:type owl:Class ;
-                     rdfs:label "Type of Goal" .
+###  urn:housing-payment-data-model#Type_of_Goal
+<urn:housing-payment-data-model#Type_of_Goal> rdf:type owl:Class ;
+                                                           rdfs:label "Type of Goal" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Unit_Type
-med-pay:Unit_Type rdf:type owl:Class ;
-                  rdfs:label "Unit Type" .
+###  urn:housing-payment-data-model#Unit_Type
+<urn:housing-payment-data-model#Unit_Type> rdf:type owl:Class ;
+                                                        rdfs:label "Unit Type" .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#VeteranStatus
-med-pay:VeteranStatus rdf:type owl:Class ;
-                      rdfs:label "VeteranStatus"@en .
+###  urn:housing-payment-data-model#VeteranStatus
+<urn:housing-payment-data-model#VeteranStatus> rdf:type owl:Class ;
+                                                            rdfs:label "VeteranStatus"@en .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
-###  urn:leavitt-partners:medicaid-payment-model#GoalStatus_0_NotStarted
-med-pay:GoalStatus_0_NotStarted rdf:type owl:NamedIndividual ,
-                                         med-pay:Goal_Status ;
-                                rdfs:label "GoalStatus_0_NotStarted"@en ;
-                                <http://www.w3.org/2004/02/skos/core#notation> 0 .
+###  urn:housing-payment-data-model#GoalStatus_0_NotStarted
+<urn:housing-payment-data-model#GoalStatus_0_NotStarted> rdf:type owl:NamedIndividual ,
+                                                                               <urn:housing-payment-data-model#Goal_Status> ;
+                                                                      rdfs:label "GoalStatus_0_NotStarted"@en ;
+                                                                      <http://www.w3.org/2004/02/skos/core#notation> 0 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#GoalStatus_1_Inactive
-med-pay:GoalStatus_1_Inactive rdf:type owl:NamedIndividual ,
-                                       med-pay:Goal_Status ;
-                              rdfs:label "GoalStatus_1_Inactive"@en ;
-                              <http://www.w3.org/2004/02/skos/core#notation> 1 .
+###  urn:housing-payment-data-model#GoalStatus_1_Inactive
+<urn:housing-payment-data-model#GoalStatus_1_Inactive> rdf:type owl:NamedIndividual ,
+                                                                             <urn:housing-payment-data-model#Goal_Status> ;
+                                                                    rdfs:label "GoalStatus_1_Inactive"@en ;
+                                                                    <http://www.w3.org/2004/02/skos/core#notation> 1 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#GoalStatus_2_InProgress
-med-pay:GoalStatus_2_InProgress rdf:type owl:NamedIndividual ,
-                                         med-pay:Goal_Status ;
-                                rdfs:label "GoalStatus_2_InProgress"@en ;
-                                <http://www.w3.org/2004/02/skos/core#notation> 2 .
+###  urn:housing-payment-data-model#GoalStatus_2_InProgress
+<urn:housing-payment-data-model#GoalStatus_2_InProgress> rdf:type owl:NamedIndividual ,
+                                                                               <urn:housing-payment-data-model#Goal_Status> ;
+                                                                      rdfs:label "GoalStatus_2_InProgress"@en ;
+                                                                      <http://www.w3.org/2004/02/skos/core#notation> 2 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#GoalStatus_3_Met
-med-pay:GoalStatus_3_Met rdf:type owl:NamedIndividual ,
-                                  med-pay:Goal_Status ;
-                         rdfs:label "GoalStatus_3_Met"@en ;
-                         <http://www.w3.org/2004/02/skos/core#notation> 3 .
+###  urn:housing-payment-data-model#GoalStatus_3_Met
+<urn:housing-payment-data-model#GoalStatus_3_Met> rdf:type owl:NamedIndividual ,
+                                                                        <urn:housing-payment-data-model#Goal_Status> ;
+                                                               rdfs:label "GoalStatus_3_Met"@en ;
+                                                               <http://www.w3.org/2004/02/skos/core#notation> 3 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#ModalityofService_0_Remote
-med-pay:ModalityofService_0_Remote rdf:type owl:NamedIndividual ,
-                                            med-pay:Modality_of_Service ;
-                                   rdfs:label "ModalityofService_0_Remote"@en ;
-                                   <http://www.w3.org/2004/02/skos/core#notation> 0 .
+###  urn:housing-payment-data-model#ModalityofService_0_Remote
+<urn:housing-payment-data-model#ModalityofService_0_Remote> rdf:type owl:NamedIndividual ,
+                                                                                  <urn:housing-payment-data-model#Modality_of_Service> ;
+                                                                         rdfs:label "ModalityofService_0_Remote"@en ;
+                                                                         <http://www.w3.org/2004/02/skos/core#notation> 0 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#ModalityofService_1_InPerson
-med-pay:ModalityofService_1_InPerson rdf:type owl:NamedIndividual ,
-                                              med-pay:Modality_of_Service ;
-                                     rdfs:label "ModalityofService_1_InPerson"@en ;
-                                     <http://www.w3.org/2004/02/skos/core#notation> 1 .
+###  urn:housing-payment-data-model#ModalityofService_1_InPerson
+<urn:housing-payment-data-model#ModalityofService_1_InPerson> rdf:type owl:NamedIndividual ,
+                                                                                    <urn:housing-payment-data-model#Modality_of_Service> ;
+                                                                           rdfs:label "ModalityofService_1_InPerson"@en ;
+                                                                           <http://www.w3.org/2004/02/skos/core#notation> 1 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#PlaceofService_0_Office
-med-pay:PlaceofService_0_Office rdf:type owl:NamedIndividual ,
-                                         med-pay:Place_of_Service ;
-                                rdfs:label "PlaceofService_0_Office"@en ;
-                                <http://www.w3.org/2004/02/skos/core#notation> 0 .
+###  urn:housing-payment-data-model#PlaceofService_0_Office
+<urn:housing-payment-data-model#PlaceofService_0_Office> rdf:type owl:NamedIndividual ,
+                                                                               <urn:housing-payment-data-model#Place_of_Service> ;
+                                                                      rdfs:label "PlaceofService_0_Office"@en ;
+                                                                      <http://www.w3.org/2004/02/skos/core#notation> 0 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#PlaceofService_1_Street
-med-pay:PlaceofService_1_Street rdf:type owl:NamedIndividual ,
-                                         med-pay:Place_of_Service ;
-                                rdfs:label "PlaceofService_1_Street"@en ;
-                                <http://www.w3.org/2004/02/skos/core#notation> 1 .
+###  urn:housing-payment-data-model#PlaceofService_1_Street
+<urn:housing-payment-data-model#PlaceofService_1_Street> rdf:type owl:NamedIndividual ,
+                                                                               <urn:housing-payment-data-model#Place_of_Service> ;
+                                                                      rdfs:label "PlaceofService_1_Street"@en ;
+                                                                      <http://www.w3.org/2004/02/skos/core#notation> 1 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#PlaceofService_2_Shelter
-med-pay:PlaceofService_2_Shelter rdf:type owl:NamedIndividual ,
-                                          med-pay:Place_of_Service ;
-                                 rdfs:label "PlaceofService_2_Shelter"@en ;
-                                 <http://www.w3.org/2004/02/skos/core#notation> 2 .
+###  urn:housing-payment-data-model#PlaceofService_2_Shelter
+<urn:housing-payment-data-model#PlaceofService_2_Shelter> rdf:type owl:NamedIndividual ,
+                                                                                <urn:housing-payment-data-model#Place_of_Service> ;
+                                                                       rdfs:label "PlaceofService_2_Shelter"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#notation> 2 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#PlaceofService_3_Home
-med-pay:PlaceofService_3_Home rdf:type owl:NamedIndividual ,
-                                       med-pay:Place_of_Service ;
-                              rdfs:label "PlaceofService_3_Home"@en ;
-                              <http://www.w3.org/2004/02/skos/core#notation> 3 .
+###  urn:housing-payment-data-model#PlaceofService_3_Home
+<urn:housing-payment-data-model#PlaceofService_3_Home> rdf:type owl:NamedIndividual ,
+                                                                             <urn:housing-payment-data-model#Place_of_Service> ;
+                                                                    rdfs:label "PlaceofService_3_Home"@en ;
+                                                                    <http://www.w3.org/2004/02/skos/core#notation> 3 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#PlaceofService_4_CommunityBased
-med-pay:PlaceofService_4_CommunityBased rdf:type owl:NamedIndividual ,
-                                                 med-pay:Place_of_Service ;
-                                        rdfs:label "PlaceofService_4_CommunityBased"@en ;
-                                        <http://www.w3.org/2004/02/skos/core#notation> 4 .
+###  urn:housing-payment-data-model#PlaceofService_4_CommunityBased
+<urn:housing-payment-data-model#PlaceofService_4_CommunityBased> rdf:type owl:NamedIndividual ,
+                                                                                       <urn:housing-payment-data-model#Place_of_Service> ;
+                                                                              rdfs:label "PlaceofService_4_CommunityBased"@en ;
+                                                                              <http://www.w3.org/2004/02/skos/core#notation> 4 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Sex_0_Female
-med-pay:Sex_0_Female rdf:type owl:NamedIndividual ,
-                              med-pay:Sex ;
-                     rdfs:label "Sex_0_Female" ;
-                     <http://www.w3.org/2004/02/skos/core#notation> 0 .
+###  urn:housing-payment-data-model#Sex_0_Female
+<urn:housing-payment-data-model#Sex_0_Female> rdf:type owl:NamedIndividual ,
+                                                                    <urn:housing-payment-data-model#Sex> ;
+                                                           rdfs:label "Sex_0_Female" ;
+                                                           <http://www.w3.org/2004/02/skos/core#notation> 0 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Sex_1_Male
-med-pay:Sex_1_Male rdf:type owl:NamedIndividual ,
-                            med-pay:Sex ;
-                   rdfs:label "Sex_1_Male" ;
-                   <http://www.w3.org/2004/02/skos/core#notation> 1 .
+###  urn:housing-payment-data-model#Sex_1_Male
+<urn:housing-payment-data-model#Sex_1_Male> rdf:type owl:NamedIndividual ,
+                                                                  <urn:housing-payment-data-model#Sex> ;
+                                                         rdfs:label "Sex_1_Male" ;
+                                                         <http://www.w3.org/2004/02/skos/core#notation> 1 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Sex_99_Datanotcollected
-med-pay:Sex_99_Datanotcollected rdf:type owl:NamedIndividual ,
-                                         med-pay:Sex ;
-                                rdfs:label "Sex_99_Datanotcollected" ;
-                                <http://www.w3.org/2004/02/skos/core#notation> 99 .
+###  urn:housing-payment-data-model#Sex_99_Datanotcollected
+<urn:housing-payment-data-model#Sex_99_Datanotcollected> rdf:type owl:NamedIndividual ,
+                                                                               <urn:housing-payment-data-model#Sex> ;
+                                                                      rdfs:label "Sex_99_Datanotcollected" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#notation> 99 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Sex_9_Clientprefersnottoanswer
-med-pay:Sex_9_Clientprefersnottoanswer rdf:type owl:NamedIndividual ,
-                                                med-pay:Sex ;
-                                       rdfs:label "Sex_9_Clientprefersnottoanswer" ;
-                                       <http://www.w3.org/2004/02/skos/core#notation> 9 .
+###  urn:housing-payment-data-model#Sex_9_Clientprefersnottoanswer
+<urn:housing-payment-data-model#Sex_9_Clientprefersnottoanswer> rdf:type owl:NamedIndividual ,
+                                                                                      <urn:housing-payment-data-model#Sex> ;
+                                                                             rdfs:label "Sex_9_Clientprefersnottoanswer" ;
+                                                                             <http://www.w3.org/2004/02/skos/core#notation> 9 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Status_0_No
-med-pay:Status_0_No rdf:type owl:NamedIndividual ,
-                             med-pay:Status ;
-                    rdfs:label "Status_0_No" ;
-                    <http://www.w3.org/2004/02/skos/core#notation> 0 .
+###  urn:housing-payment-data-model#Status_0_No
+<urn:housing-payment-data-model#Status_0_No> rdf:type owl:NamedIndividual ,
+                                                                   <urn:housing-payment-data-model#Status> ;
+                                                          rdfs:label "Status_0_No" ;
+                                                          <http://www.w3.org/2004/02/skos/core#notation> 0 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Status_1_Yes
-med-pay:Status_1_Yes rdf:type owl:NamedIndividual ,
-                              med-pay:Status ;
-                     rdfs:label "Status_1_Yes" ;
-                     <http://www.w3.org/2004/02/skos/core#notation> 1 .
+###  urn:housing-payment-data-model#Status_1_Yes
+<urn:housing-payment-data-model#Status_1_Yes> rdf:type owl:NamedIndividual ,
+                                                                    <urn:housing-payment-data-model#Status> ;
+                                                           rdfs:label "Status_1_Yes" ;
+                                                           <http://www.w3.org/2004/02/skos/core#notation> 1 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Status_2_Pending
-med-pay:Status_2_Pending rdf:type owl:NamedIndividual ,
-                                  med-pay:Status ;
-                         rdfs:label "Status_2_Pending" ;
-                         <http://www.w3.org/2004/02/skos/core#notation> 2 .
+###  urn:housing-payment-data-model#Status_2_Pending
+<urn:housing-payment-data-model#Status_2_Pending> rdf:type owl:NamedIndividual ,
+                                                                        <urn:housing-payment-data-model#Status> ;
+                                                               rdfs:label "Status_2_Pending" ;
+                                                               <http://www.w3.org/2004/02/skos/core#notation> 2 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Status_3_Request_Submitted
-med-pay:Status_3_Request_Submitted rdf:type owl:NamedIndividual ,
-                                            med-pay:Status ;
-                                   rdfs:label "Status_3_Request Submitted" ;
-                                   <http://www.w3.org/2004/02/skos/core#notation> 3 .
+###  urn:housing-payment-data-model#Status_3_Request_Submitted
+<urn:housing-payment-data-model#Status_3_Request_Submitted> rdf:type owl:NamedIndividual ,
+                                                                                  <urn:housing-payment-data-model#Status> ;
+                                                                         rdfs:label "Status_3_Request Submitted" ;
+                                                                         <http://www.w3.org/2004/02/skos/core#notation> 3 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#TribalAffiliation_0_No
-med-pay:TribalAffiliation_0_No rdf:type owl:NamedIndividual ,
-                                        med-pay:TribalAffiliation ;
-                               rdfs:label "TribalAffiliation_0_No" ;
-                               <http://www.w3.org/2004/02/skos/core#notation> 0 .
+###  urn:housing-payment-data-model#TribalAffiliation_0_No
+<urn:housing-payment-data-model#TribalAffiliation_0_No> rdf:type owl:NamedIndividual ,
+                                                                              <urn:housing-payment-data-model#TribalAffiliation> ;
+                                                                     rdfs:label "TribalAffiliation_0_No" ;
+                                                                     <http://www.w3.org/2004/02/skos/core#notation> 0 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#TribalAffiliation_1_Yes
-med-pay:TribalAffiliation_1_Yes rdf:type owl:NamedIndividual ,
-                                         med-pay:TribalAffiliation ;
-                                rdfs:label "TribalAffiliation_1_Yes" ;
-                                <http://www.w3.org/2004/02/skos/core#notation> 1 .
+###  urn:housing-payment-data-model#TribalAffiliation_1_Yes
+<urn:housing-payment-data-model#TribalAffiliation_1_Yes> rdf:type owl:NamedIndividual ,
+                                                                               <urn:housing-payment-data-model#TribalAffiliation> ;
+                                                                      rdfs:label "TribalAffiliation_1_Yes" ;
+                                                                      <http://www.w3.org/2004/02/skos/core#notation> 1 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#TribalAffiliation_8_Clientdoesntknow
-med-pay:TribalAffiliation_8_Clientdoesntknow rdf:type owl:NamedIndividual ,
-                                                      med-pay:TribalAffiliation ;
-                                             rdfs:label "TribalAffiliation_8_Clientdoesntknow" ;
-                                             <http://www.w3.org/2004/02/skos/core#notation> 8 .
+###  urn:housing-payment-data-model#TribalAffiliation_8_Clientdoesntknow
+<urn:housing-payment-data-model#TribalAffiliation_8_Clientdoesntknow> rdf:type owl:NamedIndividual ,
+                                                                                            <urn:housing-payment-data-model#TribalAffiliation> ;
+                                                                                   rdfs:label "TribalAffiliation_8_Clientdoesntknow" ;
+                                                                                   <http://www.w3.org/2004/02/skos/core#notation> 8 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#TribalAffiliation_99_Datanotcollected
-med-pay:TribalAffiliation_99_Datanotcollected rdf:type owl:NamedIndividual ,
-                                                       med-pay:TribalAffiliation ;
-                                              rdfs:label "TribalAffiliation_99_Datanotcollected" ;
-                                              <http://www.w3.org/2004/02/skos/core#notation> 99 .
+###  urn:housing-payment-data-model#TribalAffiliation_99_Datanotcollected
+<urn:housing-payment-data-model#TribalAffiliation_99_Datanotcollected> rdf:type owl:NamedIndividual ,
+                                                                                             <urn:housing-payment-data-model#TribalAffiliation> ;
+                                                                                    rdfs:label "TribalAffiliation_99_Datanotcollected" ;
+                                                                                    <http://www.w3.org/2004/02/skos/core#notation> 99 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#TypeofGoal_0_Housing
-med-pay:TypeofGoal_0_Housing rdf:type owl:NamedIndividual ,
-                                      med-pay:Type_of_Goal ;
-                             rdfs:label "TypeofGoal_0_Housing" ;
-                             <http://www.w3.org/2004/02/skos/core#notation> 0 .
+###  urn:housing-payment-data-model#TypeofGoal_0_Housing
+<urn:housing-payment-data-model#TypeofGoal_0_Housing> rdf:type owl:NamedIndividual ,
+                                                                            <urn:housing-payment-data-model#Type_of_Goal> ;
+                                                                   rdfs:label "TypeofGoal_0_Housing" ;
+                                                                   <http://www.w3.org/2004/02/skos/core#notation> 0 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#TypeofGoal_1_IncomeandEmployment
-med-pay:TypeofGoal_1_IncomeandEmployment rdf:type owl:NamedIndividual ,
-                                                  med-pay:Type_of_Goal ;
-                                         rdfs:label "TypeofGoal_1_IncomeandEmployment" ;
-                                         <http://www.w3.org/2004/02/skos/core#notation> 1 .
+###  urn:housing-payment-data-model#TypeofGoal_1_IncomeandEmployment
+<urn:housing-payment-data-model#TypeofGoal_1_IncomeandEmployment> rdf:type owl:NamedIndividual ,
+                                                                                        <urn:housing-payment-data-model#Type_of_Goal> ;
+                                                                               rdfs:label "TypeofGoal_1_IncomeandEmployment" ;
+                                                                               <http://www.w3.org/2004/02/skos/core#notation> 1 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#TypeofGoal_2_MentalHealth
-med-pay:TypeofGoal_2_MentalHealth rdf:type owl:NamedIndividual ,
-                                           med-pay:Type_of_Goal ;
-                                  rdfs:label "TypeofGoal_2_MentalHealth" ;
-                                  <http://www.w3.org/2004/02/skos/core#notation> 2 .
+###  urn:housing-payment-data-model#TypeofGoal_2_MentalHealth
+<urn:housing-payment-data-model#TypeofGoal_2_MentalHealth> rdf:type owl:NamedIndividual ,
+                                                                                 <urn:housing-payment-data-model#Type_of_Goal> ;
+                                                                        rdfs:label "TypeofGoal_2_MentalHealth" ;
+                                                                        <http://www.w3.org/2004/02/skos/core#notation> 2 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#TypeofGoal_3_PhysicalHealth
-med-pay:TypeofGoal_3_PhysicalHealth rdf:type owl:NamedIndividual ,
-                                             med-pay:Type_of_Goal ;
-                                    rdfs:label "TypeofGoal_3_PhysicalHealth" ;
-                                    <http://www.w3.org/2004/02/skos/core#notation> 3 .
+###  urn:housing-payment-data-model#TypeofGoal_3_PhysicalHealth
+<urn:housing-payment-data-model#TypeofGoal_3_PhysicalHealth> rdf:type owl:NamedIndividual ,
+                                                                                   <urn:housing-payment-data-model#Type_of_Goal> ;
+                                                                          rdfs:label "TypeofGoal_3_PhysicalHealth" ;
+                                                                          <http://www.w3.org/2004/02/skos/core#notation> 3 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#TypeofGoal_4_Other
-med-pay:TypeofGoal_4_Other rdf:type owl:NamedIndividual ,
-                                    med-pay:Type_of_Goal ;
-                           rdfs:label "TypeofGoal_4_Other"@en ;
-                           <http://www.w3.org/2004/02/skos/core#notation> 4 .
+###  urn:housing-payment-data-model#TypeofGoal_4_Other
+<urn:housing-payment-data-model#TypeofGoal_4_Other> rdf:type owl:NamedIndividual ,
+                                                                          <urn:housing-payment-data-model#Type_of_Goal> ;
+                                                                 rdfs:label "TypeofGoal_4_Other"@en ;
+                                                                 <http://www.w3.org/2004/02/skos/core#notation> 4 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Unit_Type_0_Minutes
-med-pay:Unit_Type_0_Minutes rdf:type owl:NamedIndividual ,
-                                     med-pay:Unit_Type ;
-                            rdfs:label "Unit Type_0_Minutes" ;
-                            <http://www.w3.org/2004/02/skos/core#notation> 0 .
+###  urn:housing-payment-data-model#Unit_Type_0_Minutes
+<urn:housing-payment-data-model#Unit_Type_0_Minutes> rdf:type owl:NamedIndividual ,
+                                                                           <urn:housing-payment-data-model#Unit_Type> ;
+                                                                  rdfs:label "Unit Type_0_Minutes" ;
+                                                                  <http://www.w3.org/2004/02/skos/core#notation> 0 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Unit_Type_1_Hours
-med-pay:Unit_Type_1_Hours rdf:type owl:NamedIndividual ,
-                                   med-pay:Unit_Type ;
-                          rdfs:label "Unit Type_1_Hours" ;
-                          <http://www.w3.org/2004/02/skos/core#notation> 1 .
+###  urn:housing-payment-data-model#Unit_Type_1_Hours
+<urn:housing-payment-data-model#Unit_Type_1_Hours> rdf:type owl:NamedIndividual ,
+                                                                         <urn:housing-payment-data-model#Unit_Type> ;
+                                                                rdfs:label "Unit Type_1_Hours" ;
+                                                                <http://www.w3.org/2004/02/skos/core#notation> 1 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Unit_Type_3_Days
-med-pay:Unit_Type_3_Days rdf:type owl:NamedIndividual ,
-                                  med-pay:Unit_Type ;
-                         rdfs:label "Unit Type_3_Days" ;
-                         <http://www.w3.org/2004/02/skos/core#notation> 3 .
+###  urn:housing-payment-data-model#Unit_Type_3_Days
+<urn:housing-payment-data-model#Unit_Type_3_Days> rdf:type owl:NamedIndividual ,
+                                                                        <urn:housing-payment-data-model#Unit_Type> ;
+                                                               rdfs:label "Unit Type_3_Days" ;
+                                                               <http://www.w3.org/2004/02/skos/core#notation> 3 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Unit_Type_4_Months
-med-pay:Unit_Type_4_Months rdf:type owl:NamedIndividual ,
-                                    med-pay:Unit_Type ;
-                           rdfs:label "Unit Type_4_Months" ;
-                           <http://www.w3.org/2004/02/skos/core#notation> 4 .
+###  urn:housing-payment-data-model#Unit_Type_4_Months
+<urn:housing-payment-data-model#Unit_Type_4_Months> rdf:type owl:NamedIndividual ,
+                                                                          <urn:housing-payment-data-model#Unit_Type> ;
+                                                                 rdfs:label "Unit Type_4_Months" ;
+                                                                 <http://www.w3.org/2004/02/skos/core#notation> 4 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Unit_Type_5_Dollars
-med-pay:Unit_Type_5_Dollars rdf:type owl:NamedIndividual ,
-                                     med-pay:Unit_Type ;
-                            rdfs:label "Unit Type_5_Dollars" ;
-                            <http://www.w3.org/2004/02/skos/core#notation> 5 .
+###  urn:housing-payment-data-model#Unit_Type_5_Dollars
+<urn:housing-payment-data-model#Unit_Type_5_Dollars> rdf:type owl:NamedIndividual ,
+                                                                           <urn:housing-payment-data-model#Unit_Type> ;
+                                                                  rdfs:label "Unit Type_5_Dollars" ;
+                                                                  <http://www.w3.org/2004/02/skos/core#notation> 5 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#VeteranStatus_0_No
-med-pay:VeteranStatus_0_No rdf:type owl:NamedIndividual ,
-                                    med-pay:VeteranStatus ;
-                           rdfs:label "VeteranStatus_0_No"@en ;
-                           <http://www.w3.org/2004/02/skos/core#notation> 0 .
+###  urn:housing-payment-data-model#VeteranStatus_0_No
+<urn:housing-payment-data-model#VeteranStatus_0_No> rdf:type owl:NamedIndividual ,
+                                                                          <urn:housing-payment-data-model#VeteranStatus> ;
+                                                                 rdfs:label "VeteranStatus_0_No"@en ;
+                                                                 <http://www.w3.org/2004/02/skos/core#notation> 0 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#VeteranStatus_1_Yes
-med-pay:VeteranStatus_1_Yes rdf:type owl:NamedIndividual ,
-                                     med-pay:VeteranStatus ;
-                            rdfs:label "VeteranStatus_1_Yes"@en ;
-                            <http://www.w3.org/2004/02/skos/core#notation> 1 .
+###  urn:housing-payment-data-model#VeteranStatus_1_Yes
+<urn:housing-payment-data-model#VeteranStatus_1_Yes> rdf:type owl:NamedIndividual ,
+                                                                           <urn:housing-payment-data-model#VeteranStatus> ;
+                                                                  rdfs:label "VeteranStatus_1_Yes"@en ;
+                                                                  <http://www.w3.org/2004/02/skos/core#notation> 1 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#VeteranStatus_8_Clientdoesntknow
-med-pay:VeteranStatus_8_Clientdoesntknow rdf:type owl:NamedIndividual ,
-                                                  med-pay:VeteranStatus ;
-                                         rdfs:label "VeteranStatus_8_Clientdoesntknow" ;
-                                         <http://www.w3.org/2004/02/skos/core#notation> 8 .
+###  urn:housing-payment-data-model#VeteranStatus_8_Clientdoesntknow
+<urn:housing-payment-data-model#VeteranStatus_8_Clientdoesntknow> rdf:type owl:NamedIndividual ,
+                                                                                        <urn:housing-payment-data-model#VeteranStatus> ;
+                                                                               rdfs:label "VeteranStatus_8_Clientdoesntknow" ;
+                                                                               <http://www.w3.org/2004/02/skos/core#notation> 8 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#VeteranStatus_99_Datanotcollected
-med-pay:VeteranStatus_99_Datanotcollected rdf:type owl:NamedIndividual ,
-                                                   med-pay:VeteranStatus ;
-                                          rdfs:label "VeteranStatus_99_Datanotcollected" ;
-                                          <http://www.w3.org/2004/02/skos/core#notation> 99 .
+###  urn:housing-payment-data-model#VeteranStatus_99_Datanotcollected
+<urn:housing-payment-data-model#VeteranStatus_99_Datanotcollected> rdf:type owl:NamedIndividual ,
+                                                                                         <urn:housing-payment-data-model#VeteranStatus> ;
+                                                                                rdfs:label "VeteranStatus_99_Datanotcollected" ;
+                                                                                <http://www.w3.org/2004/02/skos/core#notation> 99 .
 
 
-###  urn:leavitt-partners:medicaid-payment-model#Sex_8_Clientdoesn'tknow
-<urn:leavitt-partners:medicaid-payment-model#Sex_8_Clientdoesn'tknow> rdf:type owl:NamedIndividual ,
-                                                                               med-pay:Sex ;
+###  urn:housing-payment-data-model#Sex_8_Clientdoesn'tknow
+<urn:housing-payment-data-model#Sex_8_Clientdoesn'tknow> rdf:type owl:NamedIndividual ,
+                                                                               <urn:housing-payment-data-model#Sex> ;
                                                                       rdfs:label "Sex_8_Clientdoesntknow" ;
                                                                       <http://www.w3.org/2004/02/skos/core#notation> 8 .
 
