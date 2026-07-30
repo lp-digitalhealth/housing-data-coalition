@@ -8,7 +8,8 @@
 @base <urn:housing-payment-data-model#> .
 
 <urn:housing-payment-data-model#> rdf:type owl:Ontology ;
-                                   owl:versionIRI med-pay:v0.0.1 .
+                                   owl:versionIRI med-pay:v0.0.1 ;
+                                   owl:versionInfo "v0.0.1" .
 
 #################################################################
 #    Annotation properties
@@ -152,13 +153,13 @@ med-pay:hasVeteranStatus rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  urn:housing-payment-data-model#Begin_Date
-med-pay:Begin_Date rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf owl:topDataProperty ;
-                   rdf:type owl:FunctionalProperty ;
-                   rdfs:domain med-pay:AuthorizedService ;
-                   rdfs:range xsd:date ;
-                   rdfs:label "Begin Date" .
+###  urn:housing-payment-data-model#BeginDate
+med-pay:BeginDate rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdf:type owl:FunctionalProperty ;
+                  rdfs:domain med-pay:AuthorizedService ;
+                  rdfs:range xsd:date ;
+                  rdfs:label "Begin Date" .
 
 
 ###  urn:housing-payment-data-model#ConditionorDiagnosis
@@ -169,49 +170,49 @@ med-pay:ConditionorDiagnosis rdf:type owl:DatatypeProperty ;
                              rdfs:label "Condition or Diagnosis"@en .
 
 
-###  urn:housing-payment-data-model#Date_Care_Plan_Established
-med-pay:Date_Care_Plan_Established rdf:type owl:DatatypeProperty ;
-                                   rdfs:subPropertyOf owl:topDataProperty ;
-                                   rdf:type owl:FunctionalProperty ;
-                                   rdfs:domain med-pay:CarePlan ;
-                                   rdfs:range xsd:date ;
-                                   rdfs:label "Date Care Plan Established" .
+###  urn:housing-payment-data-model#DateCarePlanEstablished
+med-pay:DateCarePlanEstablished rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf owl:topDataProperty ;
+                                rdf:type owl:FunctionalProperty ;
+                                rdfs:domain med-pay:CarePlan ;
+                                rdfs:range xsd:date ;
+                                rdfs:label "Date Care Plan Established" .
 
 
-###  urn:housing-payment-data-model#Date_of_Birth
-med-pay:Date_of_Birth rdf:type owl:DatatypeProperty ;
-                      rdfs:subPropertyOf owl:topDataProperty ;
-                      rdf:type owl:FunctionalProperty ;
-                      rdfs:domain med-pay:Person ;
-                      rdfs:range xsd:date ;
-                      rdfs:label "Date of Birth" .
+###  urn:housing-payment-data-model#DateOfBirth
+med-pay:DateOfBirth rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdf:type owl:FunctionalProperty ;
+                    rdfs:domain med-pay:Person ;
+                    rdfs:range xsd:date ;
+                    rdfs:label "Date of Birth" .
 
 
-###  urn:housing-payment-data-model#Date_of_Goal
-med-pay:Date_of_Goal rdf:type owl:DatatypeProperty ;
-                     rdfs:subPropertyOf owl:topDataProperty ;
-                     rdf:type owl:FunctionalProperty ;
-                     rdfs:domain med-pay:Goals ;
-                     rdfs:range xsd:date ;
-                     rdfs:label "Date of Goal" .
+###  urn:housing-payment-data-model#DateOfGoal
+med-pay:DateOfGoal rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdf:type owl:FunctionalProperty ;
+                   rdfs:domain med-pay:Goals ;
+                   rdfs:range xsd:date ;
+                   rdfs:label "Date of Goal" .
 
 
-###  urn:housing-payment-data-model#Date_of_Interaction
-med-pay:Date_of_Interaction rdf:type owl:DatatypeProperty ;
-                            rdfs:subPropertyOf owl:topDataProperty ;
-                            rdf:type owl:FunctionalProperty ;
-                            rdfs:domain med-pay:ServiceEncounter ;
-                            rdfs:range xsd:date ;
-                            rdfs:label "Date of Interaction" .
+###  urn:housing-payment-data-model#DateOfInteraction
+med-pay:DateOfInteraction rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf owl:topDataProperty ;
+                          rdf:type owl:FunctionalProperty ;
+                          rdfs:domain med-pay:ServiceEncounter ;
+                          rdfs:range xsd:date ;
+                          rdfs:label "Date of Interaction" .
 
 
-###  urn:housing-payment-data-model#End_Date
-med-pay:End_Date rdf:type owl:DatatypeProperty ;
-                 rdfs:subPropertyOf owl:topDataProperty ;
-                 rdf:type owl:FunctionalProperty ;
-                 rdfs:domain med-pay:AuthorizedService ;
-                 rdfs:range xsd:date ;
-                 rdfs:label "End Date" .
+###  urn:housing-payment-data-model#EndDate
+med-pay:EndDate rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdf:type owl:FunctionalProperty ;
+                rdfs:domain med-pay:AuthorizedService ;
+                rdfs:range xsd:date ;
+                rdfs:label "End Date" .
 
 
 ###  urn:housing-payment-data-model#FirstName
@@ -223,22 +224,22 @@ med-pay:FirstName rdf:type owl:DatatypeProperty ;
                   rdfs:label "First Name"@en .
 
 
-###  urn:housing-payment-data-model#Goal_Description
-med-pay:Goal_Description rdf:type owl:DatatypeProperty ;
-                         rdfs:subPropertyOf owl:topDataProperty ;
-                         rdf:type owl:FunctionalProperty ;
-                         rdfs:domain med-pay:Goals ;
-                         rdfs:range xsd:string ;
-                         rdfs:label "Goal Description" .
+###  urn:housing-payment-data-model#GoalDescription
+med-pay:GoalDescription rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdf:type owl:FunctionalProperty ;
+                        rdfs:domain med-pay:Goals ;
+                        rdfs:range xsd:string ;
+                        rdfs:label "Goal Description" .
 
 
-###  urn:housing-payment-data-model#Health_Plan_Name
-med-pay:Health_Plan_Name rdf:type owl:DatatypeProperty ;
-                         rdfs:subPropertyOf owl:topDataProperty ;
-                         rdf:type owl:FunctionalProperty ;
-                         rdfs:domain med-pay:MedicaidInformation ;
-                         rdfs:range xsd:string ;
-                         rdfs:label "Health Plan Name" .
+###  urn:housing-payment-data-model#HealthPlanName
+med-pay:HealthPlanName rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdf:type owl:FunctionalProperty ;
+                       rdfs:domain med-pay:MedicaidInformation ;
+                       rdfs:range xsd:string ;
+                       rdfs:label "Health Plan Name" .
 
 
 ###  urn:housing-payment-data-model#LastName
@@ -250,13 +251,13 @@ med-pay:LastName rdf:type owl:DatatypeProperty ;
                  rdfs:label "Last Name"@en .
 
 
-###  urn:housing-payment-data-model#Medicaid_ID
-med-pay:Medicaid_ID rdf:type owl:DatatypeProperty ;
-                    rdfs:subPropertyOf owl:topDataProperty ;
-                    rdf:type owl:FunctionalProperty ;
-                    rdfs:domain med-pay:MedicaidInformation ;
-                    rdfs:range xsd:string ;
-                    rdfs:label "Medicaid ID" .
+###  urn:housing-payment-data-model#MedicaidId
+med-pay:MedicaidId rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdf:type owl:FunctionalProperty ;
+                   rdfs:domain med-pay:MedicaidInformation ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "Medicaid ID" .
 
 
 ###  urn:housing-payment-data-model#Notes
@@ -268,8 +269,24 @@ med-pay:Notes rdf:type owl:DatatypeProperty ;
               rdfs:label "Notes" .
 
 
-###  urn:housing-payment-data-model#SSN
-med-pay:SSN rdf:type owl:DatatypeProperty ;
+###  urn:housing-payment-data-model#ServiceType
+med-pay:ServiceType rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain med-pay:AuthorizedService ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "Service Type"@en .
+
+
+###  urn:housing-payment-data-model#ServiceTypeAuthorized
+med-pay:ServiceTypeAuthorized rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf owl:topDataProperty ;
+                              rdfs:domain med-pay:ServiceEncounter ;
+                              rdfs:range xsd:string ;
+                              rdfs:label "Service Type Authorized"@en .
+
+
+###  urn:housing-payment-data-model#Ssn
+med-pay:Ssn rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
             rdf:type owl:FunctionalProperty ;
             rdfs:domain med-pay:Person ;
@@ -277,29 +294,13 @@ med-pay:SSN rdf:type owl:DatatypeProperty ;
             rdfs:label "SSN"@en .
 
 
-###  urn:housing-payment-data-model#Service_Type
-med-pay:Service_Type rdf:type owl:DatatypeProperty ;
-                     rdfs:subPropertyOf owl:topDataProperty ;
-                     rdfs:domain med-pay:AuthorizedService ;
-                     rdfs:range xsd:string ;
-                     rdfs:label "Service Type"@en .
-
-
-###  urn:housing-payment-data-model#Service_Type_Authorized
-med-pay:Service_Type_Authorized rdf:type owl:DatatypeProperty ;
-                                rdfs:subPropertyOf owl:topDataProperty ;
-                                rdfs:domain med-pay:ServiceEncounter ;
-                                rdfs:range xsd:string ;
-                                rdfs:label "Service Type Authorized"@en .
-
-
-###  urn:housing-payment-data-model#Unit_Value
-med-pay:Unit_Value rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf owl:topDataProperty ;
-                   rdf:type owl:FunctionalProperty ;
-                   rdfs:domain med-pay:AuthorizedService ;
-                   rdfs:range xsd:integer ;
-                   rdfs:label "Unit Value" .
+###  urn:housing-payment-data-model#UnitValue
+med-pay:UnitValue rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdf:type owl:FunctionalProperty ;
+                  rdfs:domain med-pay:AuthorizedService ;
+                  rdfs:range xsd:integer ;
+                  rdfs:label "Unit Value" .
 
 
 #################################################################
@@ -318,7 +319,7 @@ med-pay:AuthorizedService rdf:type owl:Class ;
                                             owl:someValuesFrom med-pay:UnitType
                                           ] ,
                                           [ rdf:type owl:Restriction ;
-                                            owl:onProperty med-pay:Unit_Value ;
+                                            owl:onProperty med-pay:UnitValue ;
                                             owl:allValuesFrom xsd:integer
                                           ] ;
                           rdfs:label "Authorized Service" .
@@ -366,7 +367,7 @@ med-pay:ServiceEncounter rdf:type owl:Class ;
                                            owl:someValuesFrom med-pay:UnitType
                                          ] ,
                                          [ rdf:type owl:Restriction ;
-                                           owl:onProperty med-pay:Unit_Value ;
+                                           owl:onProperty med-pay:UnitValue ;
                                            owl:allValuesFrom xsd:integer
                                          ] ;
                          rdfs:label "Service Encounters" .
