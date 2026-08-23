@@ -1,0 +1,21 @@
+sequenceDiagram
+    autonumber
+    actor Provider as Housing Provider / HMIS
+    participant MSO as Billing Agent / MSO 
+    participant MCO as Health Plan / MCO
+
+    Provider->>MSO: POST /persons (Register client demographics & Medicaid ID)
+    MSO-->>Provider: 201 Created (personId)
+
+    Provider->>MSO: POST /authorizations (Submit housing service auth request with ICD-10 Z-code)
+    MSO->>MCO: Evaluate Auth Request (e.g., Z59.01 Homelessness, HCPCS H0043)
+    MCO-->>MSO: Return Auth Approval (status = 1)
+    MSO-->>Provider: 201 Created (authorizationId, status = Approved)
+
+    Provider->>MSO: POST /authorizations/{authId}/encounters (Log service encounter)
+    MSO-->>Provider: 201 Created (encounterId)
+
+    Provider->>MSO: POST /encounters/{encounterId}/claims (Submit billing claim)
+    MSO->>MCO: Process Claim (Units, CPT/HCPCS Codes)
+    MCO-->>MSO: Adjudicate & Remit Payment
+    MSO-->>Provider: 200 OK (Payment Confirmation)

@@ -1,0 +1,160 @@
+openapi: 3.0.3
+info:
+  title: Medicaid Housing Payment API (MSO Integration)
+  version: 1.1.0
+  description: RESTful API allowing Housing Providers (HMIS) to interact with a Managed Service Organization (MSO) / Billing Agent to manage Medicaid beneficiaries, authorizations, encounters, and claim submissions[cite: 1].
+paths:
+  /persons:
+    post:
+      summary: Register Person / Medicaid Beneficiary
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Person'
+      responses:
+        '201':
+          description: Person successfully registered
+  /authorizations:
+    post:
+      summary: Submit Prior Authorization Request for Housing Services
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuthorizationRequest'
+      responses:
+        '201':
+          description: Authorization request created and routed to MCO
+  /authorizations/{authId}/encounters:
+    post:
+      summary: Log Service Encounter for an Authorized Housing Service
+      parameters:
+        - name: authId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ServiceEncounter'
+      responses:
+        '201':
+          description: Service encounter successfully logged
+  /encounters/{encounterId}/claims:
+    post:
+      summary: Submit Billing Claim for an Encounter
+      parameters:
+        - name: encounterId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClaimSubmission'
+      responses:
+        '200':
+          description: Claim successfully submitted and adjudicated by MCO
+components:
+  schemas:
+    Person:
+      type: object
+      properties:
+        firstName:
+          type: string
+        lastName:
+          type: string
+        ssn:
+          type: string
+        dateOfBirth:
+          type: string
+          format: date
+        sex:
+          type: integer
+          description: 0=Female, 1=Male, 8=Client doesn't know, 9=Client prefers not to answer, 99=Data not collected[cite: 1]
+        veteranStatus:
+          type: integer
+          description: 0=No, 1=Yes, 8=Client doesn't know, 99=Data not collected[cite: 1]
+        tribalAffiliation:
+          type: integer
+          description: 0=No, 1=Yes (Federally recognized), 8=Client doesn't know, 99=Data not collected[cite: 1]
+        medicaidInformation:
+          $ref: '#/components/schemas/MedicaidInformation'
+    MedicaidInformation:
+      type: object
+      properties:
+        medicaidId:
+          type: string
+        healthPlanName:
+          type: string
+    AuthorizationRequest:
+      type: object
+      properties:
+        personId:
+          type: string
+        status:
+          type: integer
+          description: 0=No, 1=Yes, 2=Pending, 3=Request Submitted[cite: 1]
+        conditionDiagnosis:
+          type: string
+          example: "Z59.01"
+          description: ICD-10-CM Z-code diagnosis (e.g., Z59.01 Sheltered homelessness, Z59.81 Housing instability)[cite: 1]
+        serviceType:
+          type: string
+          example: "H0043"
+          description: CPT/HCPCS code (e.g., H0043, H2016 Housing Transition, H0044 Deposits, T2040 Tenancy)[cite: 1]
+        beginDate:
+          type: string
+          format: date
+        endDate:
+          type: string
+          format: date
+        unitType:
+          type: integer
+          description: 0=minutes, 1=hours, 2=days, 3=months, 4=dollars[cite: 1]
+        unitValue:
+          type: integer
+    ServiceEncounter:
+      type: object
+      properties:
+        dateOfInteraction:
+          type: string
+          format: date
+        placeOfService:
+          type: integer
+          description: 0=Office, 1=Street, 2=Shelter, 3=Home, 4=Community-based[cite: 1]
+        modalityOfService:
+          type: integer
+          description: 0=Remote, 1=In-person[cite: 1]
+        unitType:
+          type: integer
+          description: 0=minutes, 1=hours, 2=days, 3=months, 4=dollars[cite: 1]
+        unitValue:
+          type: number
+        notes:
+          type: string
+    ClaimSubmission:
+      type: object
+      properties:
+        authorizationId:
+          type: string
+        serviceType:
+          type: string
+          example: "H0043"
+          description: HCPCS/CPT billing code[cite: 1]
+        unitType:
+          type: integer
+          description: 0=minutes, 1=hours, 2=days, 3=months, 4=dollars[cite: 1]
+        unitValue:
+          type: number
+        billedAmount:
+          type: number
